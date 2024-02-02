@@ -44,7 +44,7 @@ void main(void)
     const struct display_buffer_descriptor buf_desc = {
         .width = x_res, .height = y_res, .buf_size = x_res * y_res, .pitch = DISPLAY_BUFFER_PITCH};
 
-    if (display_write(display, 0, 0, &buf_desc, buf) != 0)
+    if (display_write(display, 0, 0, &buf_desc, logo_buf) != 0)
     {
         LOG_ERR("could not write to display");
     }
